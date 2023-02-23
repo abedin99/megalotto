@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+}
+android {
+    compileSdk 31
+    buildToolsVersion '31.0.0'
+    defaultConfig {
+        applicationId "com.ratechnoworld.megalotto"
+        minSdk 23
+        targetSdk 31
+        versionCode 2
+        versionName "1.0.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Android Support Library ---------------------------------------------------------------------
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.browser:browser:1.4.0"
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Google Design Library -----------------------------------------------------------------------
+    implementation 'com.google.android.material:material:1.5.0'
+
+    // Google GSM Library --------------------------------------------------------------------------
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+    // Firebase Library ----------------------------------------------------------------------------
+    implementation platform('com.google.firebase:firebase-bom:26.7.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-messaging:23.0.2'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:20.1.2'
+
+    // Firebase SDK for Crashlytics ----------------------------------------------------------------
+    implementation 'com.google.firebase:firebase-analytics:20.1.2'
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.9'
+
+    // Retrofit API Library ------------------------------------------------------------------------
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Retrofit API Interceptor for Debuging
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+    // paytm all in one sdk
+    implementation 'com.paytm.appinvokesdk:appinvokesdk:1.6.8'
+
+    // PayUMoney SDK
+    implementation 'com.payumoney.sdkui:plug-n-play:1.6.1'
+
+    // RazorPay Payment Library
+    implementation 'com.razorpay:checkout:1.6.18'
+
+    // Third Party Library -------------------------------------------------------------------------
+    implementation 'de.hdodenhof:circleimageview:3.1.0'                 // circle image view
+    implementation 'io.customerly:customerly-android-sdk:3.1.1'         // chat view
+    implementation 'com.github.GoodieBag:Pinview:v1.4'                  // pin view
+    implementation 'com.github.bumptech.glide:glide:4.12.0'             // image loader
+    implementation 'com.hbb20:ccp:2.4.0'                                // country code picker
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+

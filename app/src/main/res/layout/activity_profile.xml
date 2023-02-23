@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/textImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/nav_header_desc"
+                android:background="@drawable/green_circle"
+                android:gravity="center"
+                android:maxLength="1"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                android:textAllCaps="true"
+                android:text="@string/app_name"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/nav_header_desc"
+                android:gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/app_icon"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_add_a_photo_black_24dp"
+                android:layout_marginStart="-40dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/green_light_circle"
+                android:layout_gravity="bottom"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icons8_user_24"
+                android:hint="Full Name"
+                android:padding="18dp"
+                android:textColorHint="#606060"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_mail_black_24dp"
+                android:hint="Email"
+                android:padding="18dp"
+                android:textColorHint="#606060"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/mobileno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icons8_phone_24"
+                android:hint="Mobile number"
+                android:inputType="number"
+                android:padding="18dp"
+                android:textColorHint="#606060"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dateofbirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_date_range_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Date Of Birth"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:padding="18dp"
+                android:textColorHint="#606060"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_wc_24"
+                android:drawablePadding="10dp"
+                android:hint="Gender"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="false"
+                android:padding="18dp"
+                android:textColorHint="#606060"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icons8_lock_24_fil"
+                android:drawablePadding="10dp"
+                android:textColorHint="#606060"
+                android:hint="Change Password"
+                android:inputType="textPassword"
+                android:padding="18dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textinput_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="bottom"
+            app:cardBackgroundColor="@color/white"
+            app:elevation="4dp"
+            app:cardCornerRadius="30dp">
+
+            <TextView
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Update Profile"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background_accent"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textAlignment="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

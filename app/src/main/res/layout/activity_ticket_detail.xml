@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/linearBuy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/prizeLblTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Prize Pool"
+                    android:textColor="@color/grey_40"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+                <TextView
+                    android:id="@+id/feeLblTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_40"
+                    android:text="Entry"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/prizeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/prizeLblTv"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="₹500"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/feeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/feeLblTv"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_green"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:minWidth="80dp"
+                    android:minHeight="30dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="₹20"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+                <LinearLayout
+                    android:layout_below="@+id/feeTv"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.ratechnoworld.megalotto.utils.CustomProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/seekBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="4dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@android:color/transparent"
+                        style="?android:attr/progressBarStyleHorizontal"/>
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:max="4"
+                        android:progress="1"
+                        style="?android:attr/progressBarStyleHorizontal"/>
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/roomStatusTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:text="11 Spots Left"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/roomSizeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="1000 Spots"
+                            android:textColor="@color/grey_40"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorBackground">
+
+                <ImageView
+                    android:id="@+id/firstPrizeIv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_first_prize"
+                    app:tint="@color/grey_60" />
+
+                <TextView
+                    android:id="@+id/firstPrizeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@+id/firstPrizeIv"
+                    android:gravity="center_vertical"
+                    android:text="₹100"
+                    android:textColor="@color/grey_60"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/totalPrizeIv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@+id/firstPrizeTv"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_total_prize"
+                    app:tint="@color/grey_60" />
+
+                <TextView
+                    android:id="@+id/totalPrizeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@+id/totalPrizeIv"
+                    android:gravity="center_vertical"
+                    android:text="100"
+                    android:textColor="@color/grey_60"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/totalBoughtIv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@+id/totalPrizeTv"
+                    android:src="@drawable/ic_total_bought"
+                    app:tint="@color/grey_60" />
+
+                <TextView
+                    android:id="@+id/totalBoughtTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@+id/totalBoughtIv"
+                    android:gravity="center_vertical"
+                    android:text="100"
+                    android:textColor="@color/grey_60"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/checkedIv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_checked"
+                    app:tint="@color/grey_60"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/joinTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorButton"
+                android:gravity="center_vertical|center_horizontal"
+                android:minHeight="45dp"
+                android:text="Join Contest Now"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topPanel"
+        android:background="@color/white"
+        android:minHeight="40dp"
+        android:textAllCaps="false"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/black" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"
+        android:background="@color/white" />
+
+</RelativeLayout>

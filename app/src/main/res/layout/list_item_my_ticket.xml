@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/prizeLblTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Prize Pool"
+                android:textColor="@color/grey_40"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/feeLblTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/grey_40"
+                android:text="Entry"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/prizeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prizeLblTv"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:text="₹500"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/feeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feeLblTv"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:text="₹500"
+                android:textColor="@color/colorButton"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Date Of Bought\n12/12/2022"
+                android:textAlignment="center"
+                android:textColor="@color/grey_60"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorBackground">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/firstPrizeIv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_first_prize"
+                app:tint="@color/grey_60" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/firstPrizeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/firstPrizeIv"
+                android:gravity="center_vertical"
+                android:text="₹100"
+                android:textColor="@color/grey_60"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/totalPrizeIv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/firstPrizeTv"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_total_prize"
+                app:tint="@color/grey_60" />
+
+            <TextView
+                android:id="@+id/totalPrizeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/totalPrizeIv"
+                android:gravity="center_vertical"
+                android:text="100"
+                android:textColor="@color/grey_60"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/totalBoughtIv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/totalPrizeTv"
+                android:src="@drawable/ic_total_bought"
+                app:tint="@color/grey_60" />
+
+            <TextView
+                android:id="@+id/totalBoughtTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/totalBoughtIv"
+                android:gravity="center_vertical"
+                android:text="100"
+                android:textColor="@color/grey_60"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/checkedIv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_checked"
+                app:tint="@color/grey_60"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

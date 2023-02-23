@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_profile"
+            android:checkable="true"
+            android:icon="@drawable/icons8_user_24"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/menu_wallet"
+            android:checkable="true"
+            android:icon="@drawable/wallet"
+            android:title="@string/menu_wallet" />
+        <item
+            android:id="@+id/menu_my_ticket"
+            android:checkable="true"
+            android:icon="@drawable/icons8_credit_card_24"
+            android:title="@string/menu_my_ticket" />
+        <item
+            android:id="@+id/menu_history"
+            android:checkable="true"
+            android:icon="@drawable/icons8_time_machine_24"
+            android:title="@string/menu_history" />
+        <item
+            android:id="@+id/menu_refer_earn"
+            android:checkable="true"
+            android:icon="@drawable/icons8_user_account_24"
+            android:title="@string/menu_refer_earn" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:visible="false"
+            android:id="@+id/menu_report_an_issue"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_issue"
+            android:title="@string/menu_report_an_issue" />
+
+        <item
+            android:id="@+id/menu_policy"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_privacy"
+            android:title="@string/menu_policy" />
+
+        <item
+            android:id="@+id/menu_terms"
+            android:checkable="true"
+            android:icon="@drawable/icons8_bookmark_24"
+            android:title="@string/menu_terms" />
+
+        <item
+            android:id="@+id/menu_contact"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_contact"
+            android:title="@string/menu_contact" />
+
+        <item
+            android:id="@+id/menu_about"
+            android:checkable="true"
+            android:icon="@drawable/ic_menu_help"
+            android:title="@string/menu_about" />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/logout"
+            android:checkable="true"
+            android:icon="@drawable/logout_variant"
+            android:title="@string/logout" />
+
+    </group>
+</menu>
