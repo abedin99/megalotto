@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Mega Lotto</string>
-    <string name="app_name_part_one">Mega</string>
-    <string name="app_name_part_two">Lotto</string>
+    <string name="app_name">Good Luck 24</string>
+    <string name="app_name_part_one">Good</string>
+    <string name="app_name_part_two">Luck</string>
 
     <!-- Customerly App Id -->
     <string name="customerly_app_id">xxxxxxxxxx</string>

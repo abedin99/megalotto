@@ -3,8 +3,8 @@ package com.ratechnoworld.megalotto.helper;
 public class AppConstant {
 
     // Put your api url and file path url
-    public static final String API_URL = "https://domain.com/api/";
-    public static final String FILE_URL = "https://domain.com/";
+    public static final String API_URL = "https://goodluck24.xyz/api/";
+    public static final String FILE_URL = "https://goodluck24.xyz/";
 
     // Put your purchase key
     public static final String PURCHASE_KEY = "1234567890";
@@ -19,8 +19,8 @@ public class AppConstant {
     public static String PAYU_M_KEY = "XXXXXXXXXXX";
 
     // Set default country code and sign
-    public static String COUNTRY_CODE = "+91";
-    public static String CURRENCY_SIGN = "₹";
+    public static String COUNTRY_CODE = "+880";
+    public static String CURRENCY_SIGN = "৳";
 
     // Set default app configuration
     public static int MAINTENANCE_MODE = 0;     // (0 for Off, 1 for On)

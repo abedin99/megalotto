@@ -7,7 +7,7 @@ android {
     compileSdk 31
     buildToolsVersion '31.0.0'
     defaultConfig {
-        applicationId "com.ratechnoworld.megalotto"
+        applicationId "com.ratechnoworld.abedin"
         minSdk 23
         targetSdk 31
         versionCode 2
@@ -29,6 +29,7 @@ android {
     packagingOptions {
         resources.excludes.add("META-INF/*")
     }
+    namespace 'com.ratechnoworld.megalotto'
 }
 
 dependencies {

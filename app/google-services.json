@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "781130404471",
+    "project_id": "good-luck-24",
+    "storage_bucket": "good-luck-24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781130404471:android:d25f161fc1bf24ae74ec72",
+        "android_client_info": {
+          "package_name": "com.ratechnoworld.abedin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781130404471-6a59s6of6aojg949j813uiusarbtjm1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyPLhNbO4vgvsuq_8Wo8GE-ja8CB1QyCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781130404471-6a59s6of6aojg949j813uiusarbtjm1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
