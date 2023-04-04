@@ -38,6 +38,13 @@
                 android:layout_height="wrap_content"
                 android:text="RazorPay"
                 android:checked="false"/>
+            <RadioButton
+                android:id="@+id/ManualPayRb"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="ManualPay"
+                android:checked="false"/>
         </RadioGroup>
         <LinearLayout
             android:orientation="horizontal"
@@ -53,20 +60,6 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:paddingStart="15sp" />
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/amountEt"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bg_wallet_right"
-                android:padding="15dp"
-                android:hint="Enter Deposit Amount"
-                android:maxLength="4"
-                android:inputType="number"
-                android:imeOptions="actionDone"
-                android:textStyle="bold"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"/>
         </LinearLayout>
 
         <TextView

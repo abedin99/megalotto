@@ -58,12 +58,14 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
     private Context context;
 
     public RadioGroup radioGroup;
-    public RadioButton payTmRb, payuRb, RazorPayRb;
+    public RadioButton payTmRb, payuRb, RazorPayRb, ManualPayRb;
     private TextInputEditText amountEt;
+    private TextInputEditText numberEt;
     public TextView signTv, noteTv, alertTv;
     private Button submitBt;
 
     public String amountSt;
+    public String numberSt;
     public String orderIdSt;
     public String paymentIdSt;
     public String checksumSt;
@@ -93,7 +95,9 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
         payTmRb = findViewById(R.id.payTmRb);
         payuRb = findViewById(R.id.payuRb);
         RazorPayRb = findViewById(R.id.RazorPayRb);
+        ManualPayRb = findViewById(R.id.ManualPayRb);
         amountEt = findViewById(R.id.amountEt);
+        numberEt = findViewById(R.id.numberEt);
         noteTv = findViewById(R.id.noteTv);
         alertTv = findViewById(R.id.alertTv);
         signTv = findViewById(R.id.signTv);
@@ -108,12 +112,15 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
 
         RazorPayRb.setOnClickListener(v -> mopSt = "RazorPay");
 
+        ManualPayRb.setOnClickListener(v -> mopSt = "ManualPay");
+
         switch (AppConstant.MODE_OF_PAYMENT) {
             case 1:
                 radioGroup.setVisibility(View.GONE);
                 payTmRb.setVisibility(View.VISIBLE);
                 payuRb.setVisibility(View.GONE);
                 RazorPayRb.setVisibility(View.GONE);
+                ManualPayRb.setVisibility(View.GONE);
                 mopSt = "PayTm";
                 break;
             case 2:
@@ -121,6 +128,7 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
                 payTmRb.setVisibility(View.GONE);
                 payuRb.setVisibility(View.VISIBLE);
                 RazorPayRb.setVisibility(View.GONE);
+                ManualPayRb.setVisibility(View.GONE);
                 mopSt = "PayUMoney";
                 break;
             case 3:
@@ -128,13 +136,16 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
                 payTmRb.setVisibility(View.GONE);
                 payuRb.setVisibility(View.GONE);
                 RazorPayRb.setVisibility(View.VISIBLE);
+                ManualPayRb.setVisibility(View.GONE);
                 mopSt = "RazorPay";
                 break;
             case 4:
                 radioGroup.setVisibility(View.GONE);
                 payTmRb.setVisibility(View.GONE);
                 payuRb.setVisibility(View.GONE);
-                RazorPayRb.setVisibility(View.VISIBLE);
+                RazorPayRb.setVisibility(View.GONE);
+                ManualPayRb.setVisibility(View.VISIBLE);
+                numberEt.setVisibility(View.VISIBLE);
                 mopSt = "ManualPay";
                 break;
             default:
@@ -142,6 +153,7 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
                 payTmRb.setVisibility(View.VISIBLE);
                 payuRb.setVisibility(View.VISIBLE);
                 RazorPayRb.setVisibility(View.VISIBLE);
+                ManualPayRb.setVisibility(View.VISIBLE);
                 mopSt = "PayTm";
                 break;
         }
@@ -164,6 +176,7 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
             paymentIdSt = orderIdSt;
 
             amountSt = Objects.requireNonNull(amountEt.getText()).toString();
+            numberSt = Objects.requireNonNull(numberEt.getText()).toString();
             if (!amountSt.isEmpty()) {
                 double payout = Integer.parseInt(amountEt.getText().toString());
 
@@ -193,7 +206,7 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
                                 startRazorPay(amountSt);
                                 break;
                             case "ManualPay":
-                                startManualPay(amountSt);
+                                startManualPay(amountSt, numberSt);
                                 break;
                         }
                     } catch (NullPointerException e) {
@@ -268,7 +281,7 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
         }
     }
 
-    private void startManualPay(String amount) {
+    private void startManualPay(String amount, String number) {
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
          */
@@ -284,6 +297,7 @@ public class DepositActivity extends AppCompatActivity implements PaymentResultL
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
             options.put("amount", Integer.parseInt(amount) * 100);
+            options.put("number", Integer.parseInt(number));
 
             JSONObject preFill = new JSONObject();
             preFill.put("email", Preferences.getInstance(context).getString(Preferences.KEY_EMAIL));
